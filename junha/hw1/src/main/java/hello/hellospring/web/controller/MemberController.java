@@ -1,11 +1,14 @@
 package hello.hellospring.web.controller;
 
+import java.util.List;
+
 import hello.hellospring.domain.Member;
 import hello.hellospring.service.MemberService;
 import hello.hellospring.web.dto.MemberForm;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -29,5 +32,12 @@ public class MemberController {
 		member.setName(form.getName());
 		memberService.join(member);
 		return "redirect:/";
+	}
+
+	@GetMapping(value = "/members")
+	public String list(Model model) {
+		List<Member> members = memberService.findMembers();
+		model.addAttribute("members", members);
+		return "members/memberList";
 	}
 }
