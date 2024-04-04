@@ -15,7 +15,7 @@ public class MemoryMemberRepository implements MemberRepository {
     }
     @Override
     public Optional<Member> findById(Long id) {
-        return Oprional.of(store.get(id)); //null이 반환될 가능성이 있으니 Oprional 써주기
+        return Optional.of(store.get(id)); //null이 반환될 가능성이 있으니 Oprional 써주기
     }
     @Override
     public Optional<Member> findByName(String name) {
