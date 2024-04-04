@@ -18,6 +18,11 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//DB에 붙이기 위해 하는 환경설정
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	runtimeOnly 'com.h2database:h2'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	// spring-boot-starter-web, spring-boot-starter-thymeleaf 두개 밖에 안 땡겼지만 라이브러이간의 의존성으로 인해 훨씬 많은(spring core 까지) 가져오게 됨
 	// logging까지
