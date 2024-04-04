@@ -1,8 +1,7 @@
 package likelion12.likelion121.service;
 
-import likelion12.likelion121.repository.JdbcMemberRepository;
-import likelion12.likelion121.repository.MemberRepository;
-import likelion12.likelion121.repository.MemoryMemberRepository;
+import jakarta.persistence.EntityManager;
+import likelion12.likelion121.repository.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,15 +9,30 @@ import javax.sql.DataSource;
 
 @Configuration
 public class SpringConfig {
+
+    //Jdbc
     private final DataSource dataSource;
-    public SpringConfig(DataSource dataSource) {
+    // JPA
+    private final EntityManager em;
+
+    public SpringConfig(DataSource dataSource, EntityManager em) {
         this.dataSource = dataSource;
+        this.em = em;
     }
 
     @Bean
     public MemberRepository memberRepository(){
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+
+        // 순수 Jdbc
+//        return new JdbcMemberRepository(dataSource);
+
+        // Jdbc Template
+//        return new JdbcTemplateMemberRepository(dataSource);
+
+        //JPA
+        return new JpaMemberRepository(em);
+
     }
     @Bean
     public MemberService memberService(){

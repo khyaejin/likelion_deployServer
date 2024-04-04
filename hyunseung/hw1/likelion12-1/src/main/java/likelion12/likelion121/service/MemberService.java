@@ -1,5 +1,6 @@
 package likelion12.likelion121.service;
 
+import jakarta.transaction.Transactional;
 import likelion12.likelion121.domain.Member;
 import likelion12.likelion121.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 @Service
 public class MemberService {
     private final MemberRepository memberRepository;
