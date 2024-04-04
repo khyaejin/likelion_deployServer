@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 public class MemberController {
     private final MemberService memberService;
 
-    @Autowired
+    @Autowired //DI:의존성 주입
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }

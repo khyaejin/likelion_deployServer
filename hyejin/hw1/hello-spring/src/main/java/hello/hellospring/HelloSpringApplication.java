@@ -10,6 +10,8 @@ public class HelloSpringApplication {
 		SpringApplication.run(HelloSpringApplication.class, args);
 	}
 
+	public static class SpringConfig {
+	}
 }
 
 /**

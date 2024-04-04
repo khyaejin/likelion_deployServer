@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-@Service
+//@Service : 컴포넌트 주입
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired
+    //@Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     } //di
