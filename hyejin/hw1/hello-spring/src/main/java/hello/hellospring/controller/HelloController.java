@@ -21,7 +21,7 @@ public class HelloController {
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name") String name, Model model) {
         model.addAttribute("name", name);
-        return "hello-template"; //html을 조작해서 화면에 내는 방식
+        return "hello-template"; //html을 조작해서(랜더링 된 html) 화면에 내는(고객에게 주는) 방식
     }
 
     @GetMapping("hello-string")
@@ -40,7 +40,7 @@ public class HelloController {
      **/
 
     @GetMapping("hello-api")
-    @ResponseBody //객체로 반환하면 Json으로 들어가도록 기본적으로 정해져 있음
+    @ResponseBody //객체로 반환하면 Json으로 들어가도록 기본적으로 정해져 있음 (대부분 이걸로)
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
