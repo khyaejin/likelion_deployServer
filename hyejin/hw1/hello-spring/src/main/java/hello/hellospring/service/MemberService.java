@@ -7,7 +7,11 @@ import hello.hellospring.repository.MemberRepository;
 import java.util.*;
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    } //di
 
     //회원가입
     public Long join(Member member){
