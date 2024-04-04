@@ -1,0 +1,7 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p th:text="'hello ' + ${name}">hello! empty</p>
+</body>
+</html>
+
+<!-- thymeleaf : server없이 그냥 볼 수도 있음.(껍데기 정도) 여기서는 hello! empty 만 나옴. 서버를 돌리게 되면 "'hello ' + ${name}"이 부분이 변환이 되어서 보임-->
