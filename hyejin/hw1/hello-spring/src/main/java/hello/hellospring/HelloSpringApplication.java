@@ -11,3 +11,12 @@ public class HelloSpringApplication {
 	}
 
 }
+
+/**
+ 빌드하고 실행하는 법
+ 콘솔로 이동
+ ./gradlew build
+ cd build/libs
+ java -jar hello-spring-0.0.1-SNAPSHOT.jar
+ 실행 확인
+ **/
