@@ -3,12 +3,14 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemoryMemberRepository;
 import hello.hellospring.repository.MemberRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 //@Service : 컴포넌트 주입
+@Transactional //JPA를 사용하기위해
 public class MemberService {
     private final MemberRepository memberRepository;
 
