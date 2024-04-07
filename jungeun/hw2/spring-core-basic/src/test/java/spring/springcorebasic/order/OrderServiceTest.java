@@ -2,14 +2,12 @@ package spring.springcorebasic.order;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import spring.springcorebasic.member.Grade;
-import spring.springcorebasic.member.Member;
-import spring.springcorebasic.member.MemberService;
-import spring.springcorebasic.member.MemberServiceImpl;
+import spring.springcorebasic.discount.FixDiscountPolicy;
+import spring.springcorebasic.member.*;
 
 public class OrderServiceTest {
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService = new MemberServiceImpl(new MemoryMemberRepository());
+    OrderService orderService = new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
 
     @Test
     void createOrder() {
