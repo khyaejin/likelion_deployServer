@@ -20,7 +20,6 @@ public class ApplicationContextBasicFindTest {
         MemberService memberService = ac.getBean("memberService", MemberService.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class); // assetj
     }
-
     @Test
     @DisplayName("Spring Bean 조회 - ByType")
     public void findBeanByType() {
