@@ -5,7 +5,11 @@ import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
+    MemberService memberService;
+
+    public MemberServiceTest(MemberService memberService) {
+        this.memberService = memberService;
+    }
 
     // Test Case를 쉽게 작성하기 위한 로직 given-when-then
     @Test
