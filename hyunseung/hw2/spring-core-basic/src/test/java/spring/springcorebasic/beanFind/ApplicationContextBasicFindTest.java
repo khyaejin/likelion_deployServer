@@ -27,4 +27,10 @@ public class ApplicationContextBasicFindTest {
         MemberService memberService = ac.getBean(MemberService.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
+    @Test
+    @DisplayName("존재하지 않는 Bean 조회 - 예외 발생")
+    public void findNotExistBean() {
+        org.junit.jupiter.api.Assertions.assertThrows(NoSuchBeanDefinitionException.class, () ->
+                ac.getBean("XXXXXXX", MemberService.class));
+    }
 }
