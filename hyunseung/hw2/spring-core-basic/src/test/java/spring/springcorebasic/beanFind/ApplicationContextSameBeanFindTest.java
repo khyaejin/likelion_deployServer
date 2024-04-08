@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import spring.springcorebasic.member.MemberRepository;
+import spring.springcorebasic.member.MemberService;
 import spring.springcorebasic.member.MemoryMemberRepository;
 
 public class ApplicationContextSameBeanFindTest {
@@ -30,5 +31,13 @@ public class ApplicationContextSameBeanFindTest {
     public void findBeanByTypeDuplicate() {
         Assertions.assertThrows(NoUniqueBeanDefinitionException.class, () ->
                 ac.getBean(MemberRepository.class));
+    }
+
+    @Test
+    @DisplayName("타입으로 지정 시, 이름으로 조회")
+    public void findBeanByNameDuplicate() {
+        MemberRepository memberRepository = ac.getBean("memberRepository1", MemberRepository.class);
+        org.assertj.core.api.Assertions.assertThat(memberRepository).isInstanceOf(MemoryMemberRepository.class);
+
     }
 }
