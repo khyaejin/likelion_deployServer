@@ -11,6 +11,8 @@ import spring.springcorebasic.member.MemberRepository;
 import spring.springcorebasic.member.MemberService;
 import spring.springcorebasic.member.MemoryMemberRepository;
 
+import java.util.Map;
+
 public class ApplicationContextSameBeanFindTest {
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SameConfig.class);
 
@@ -20,6 +22,7 @@ public class ApplicationContextSameBeanFindTest {
         public MemberRepository memberRepository1() {
             return new MemoryMemberRepository();
         }
+
         @Bean
         public MemberRepository memberRepository2() {
             return new MemoryMemberRepository();
@@ -38,6 +41,17 @@ public class ApplicationContextSameBeanFindTest {
     public void findBeanByNameDuplicate() {
         MemberRepository memberRepository = ac.getBean("memberRepository1", MemberRepository.class);
         org.assertj.core.api.Assertions.assertThat(memberRepository).isInstanceOf(MemoryMemberRepository.class);
+    }
+
+    @Test
+    @DisplayName("특정 타입을 모두 조회")
+    public void findAllBeanByType() {
+        Map<String, MemberRepository> beansOfType = ac.getBeansOfType(MemberRepository.class);
+        for (String key : beansOfType.keySet()) {
+            System.out.println("key: " + key + ", value: " + beansOfType.get(key));
+        }
+        System.out.println("BeanOfType: " + beansOfType);
+        org.assertj.core.api.Assertions.assertThat(beansOfType.size()).isEqualTo(2);
 
     }
 }
