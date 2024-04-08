@@ -28,21 +28,18 @@ public class ApplicationContextSameBeanFindTest {
             return new MemoryMemberRepository();
         }
     }
-
     @Test
     @DisplayName("Type으로 조회 시 같은 타입이 둘 이상이면, 중복 예외 발생")
     public void findBeanByTypeDuplicate() {
         Assertions.assertThrows(NoUniqueBeanDefinitionException.class, () ->
                 ac.getBean(MemberRepository.class));
     }
-
     @Test
     @DisplayName("타입으로 지정 시, 이름으로 조회")
     public void findBeanByNameDuplicate() {
         MemberRepository memberRepository = ac.getBean("memberRepository1", MemberRepository.class);
         org.assertj.core.api.Assertions.assertThat(memberRepository).isInstanceOf(MemoryMemberRepository.class);
     }
-
     @Test
     @DisplayName("특정 타입을 모두 조회")
     public void findAllBeanByType() {
