@@ -15,7 +15,7 @@ import spring.springcorebasic.order.OrderServiceImpl;
 @Configuration
 public class AppConfig {
     @Bean
-    public MemberService memberService(){
+    public MemberService memberService(){ //Bean 이름은 다 달라야함
         return new MemberServiceImpl( memberRepository());
     }
     @Bean
