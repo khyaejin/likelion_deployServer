@@ -2,6 +2,7 @@ package spring.springcorebasic;
 
 import spring.springcorebasic.discount.DiscountPolicy;
 import spring.springcorebasic.discount.FixDiscountPolicy;
+import spring.springcorebasic.discount.RateDiscountPolicy;
 import spring.springcorebasic.member.MemberRepository;
 import spring.springcorebasic.member.MemberService;
 import spring.springcorebasic.member.MemberServiceImpl;
@@ -23,6 +24,6 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy(){
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy(); //구체만 변경해주면 됨(DIP 위반 x)
     }
 }
