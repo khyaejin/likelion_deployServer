@@ -10,6 +10,8 @@ import org.testng.annotations.Test;
 import spring.springcorebasic.member.MemberRepository;
 import spring.springcorebasic.member.MemoryMemberRepository;
 
+import java.util.Map;
+
 public class ApplicationContextSameBeanFindTest {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SameBeanConfig.class);
@@ -27,6 +29,19 @@ public class ApplicationContextSameBeanFindTest {
        MemberRepository memberRepository= ac.getBean("memberRepository1", MemberRepository.class);
         org.assertj.core.api.Assertions.assertThat(memberRepository).isInstanceOf(MemberRepository.class);
     }
+
+    @Test
+    @DisplayName("특정 타입을 모두 조회하기")
+    void findAllBeansType(){
+        Map<String, MemberRepository> beansOfType = ac.getBeansOfType(MemberRepository.class);
+        for(String key : beansOfType.keySet()){
+            System.out.println("key = " + key + "value = " + beansOfType.get(key));
+        }
+
+        System.out.println("beansType = " + beansOfType);
+        org.assertj.core.api.Assertions.assertThat(beansOfType.size()).isEqualTo(2);
+    }
+
     @Configuration
     static class SameBeanConfig{
         @Bean
