@@ -16,7 +16,7 @@ public class NetworkClient {
     public void connect() {
         System.out.println("connect: " + url);
     }
-    
+
     public void call(String message) {
         System.out.println("call: " + url + " message = " + message);
     }
