@@ -1,15 +1,19 @@
 package spring.springcorebasic.order;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import spring.springcorebasic.discount.DiscountPolicy;
 import spring.springcorebasic.member.Member;
 import spring.springcorebasic.member.MemberRepository;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
     // 회원의 등급을 확인하기 위함 => 할인정책 적용을 위해
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
