@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="spring-core-basic2.spring-core-basic" target="17" />
+      <module name="spring-core-basic2.spring-core-basic.main" target="17" />
+      <module name="spring-core-basic2.spring-core-basic.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

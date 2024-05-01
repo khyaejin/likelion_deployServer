@@ -1,7 +1,8 @@
-package likelion12.likelion121.service;
+package likelion12.likelion121;
 
 import jakarta.persistence.EntityManager;
 import likelion12.likelion121.repository.*;
+import likelion12.likelion121.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
