@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/hw1/likelion12-1" />
     <file type="web" url="file://$PROJECT_DIR$/hw2/spring-core-basic" />
+    <file type="web" url="file://$PROJECT_DIR$/hw3/spring-core-basic02" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
