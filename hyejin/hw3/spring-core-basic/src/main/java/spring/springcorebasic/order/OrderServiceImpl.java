@@ -21,7 +21,7 @@ public class OrderServiceImpl implements OrderService{
     // 단일 책임의 원칙.
 
     // 생성자를 사용하여 의존관계 주입(생성자 주입)
-    @Autowired
+    // @Autowired : 생성자가 하나만 있으면 @Autowired 지울 수 있음
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
