@@ -1,5 +1,7 @@
 package spring.springcorebasic.order;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import spring.springcorebasic.discount.DiscountPolicy;
 import spring.springcorebasic.discount.FixDiscountPolicy;
 import spring.springcorebasic.discount.RateDiscountPolicy;
@@ -7,6 +9,7 @@ import spring.springcorebasic.member.Member;
 import spring.springcorebasic.member.MemberRepository;
 import spring.springcorebasic.member.MemoryMemberRepository;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
     // 회원의 등급을 확인하기 위함 => 할인정책 적용을 위해
@@ -18,6 +21,7 @@ public class OrderServiceImpl implements OrderService{
     // 단일 책임의 원칙.
 
     // 생성자를 사용하여 의존관계 주입(생성자 주입)
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
