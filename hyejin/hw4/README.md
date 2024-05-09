@@ -1,11 +1,3 @@
-## ✨ 이슈 번호
-
-- #16
-
-----
-
-<br><br>
-
 ### 🦁 과제 리뷰
 
 **1. 📄[강의]**
@@ -13,7 +5,7 @@
 SpringBoot 프로젝트 생성부터, 실제 API 개발을 위한 기본 코드 작성을 연습합니다.
 
 - Notion 링크 : https://hyejinworkspace.notion.site/hw4-f5c3d171180a4a58a7605b96d319b6b2?pvs=4
-- Github Repository 링크 : 
+- Github Repository 링크 : https://github.com/khyaejin/likelion-homepage
 
 <br>
 
