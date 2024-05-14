@@ -1,4 +1,4 @@
-<img width="655" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/2707d1bb-56b8-4248-9608-fb4a54c047c5">## [과제 1] 
+## [과제 1] 
 ### Github 주소: https://github.com/gesal03/likelion12-Sign-up-Login
 ### POSTMAN
 <img width="444" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/b874cfd3-5560-4aba-b60c-bc1a85ff05b6">
