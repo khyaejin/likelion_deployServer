@@ -1,4 +1,4 @@
-## [과제 1] 
+<img width="655" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/2707d1bb-56b8-4248-9608-fb4a54c047c5">## [과제 1] 
 ### Github 주소: https://github.com/gesal03/likelion12-Sign-up-Login
 ### POSTMAN
 <img width="444" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/b874cfd3-5560-4aba-b60c-bc1a85ff05b6">
@@ -34,11 +34,20 @@
 
 #### 로그인(Login)
 1. 로그인 성공(200)
+<img width="655" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/cf354161-f8cb-49da-bc0a-8c47a6f56c74">
+
 2. 비밀번호 불일치(401)
+<img width="660" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/1172d765-b8d6-4c7d-a955-ce1311b73211">
+
 3. 존재하지 않는 계정(404)
+<img width="652" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/2c86ee91-90b2-479a-94dd-1d212b51408d">
+
 #### 회원 탈퇴
 1. 회원 탈퇴 성공(200)
+<img width="659" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/7c517a9c-faa8-48f9-b79f-e5c65e9b0b55">
+
 2. 존재하지 않는 계정(404)
+<img width="662" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/fd67ef08-4b0c-4c05-ac45-f46717fd5b40">
 
 
 ### [과제 2]
