@@ -55,3 +55,7 @@
 #### POSTMAN
 <img width="433" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/4e5df6fc-5aa3-4b3a-8a6b-7a2b5f1f27ec">
 
+#### 결과
+<img width="1089" alt="스크린샷 2024-05-14 오후 1 37 13" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/923686d9-a121-4253-8b88-d9089fcb40e0">
+
+
