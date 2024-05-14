@@ -5,6 +5,7 @@
 
 #### 결과
 1. 회원가입(Sign-up)
+
   1-1. 성공(200)
    <img width="645" alt="image" src="https://github.com/HSU-Likelion-Backend-12th/team-3/assets/77336664/143693e2-66e8-4e68-ac77-6720cb02b2c3">
   1-2.
